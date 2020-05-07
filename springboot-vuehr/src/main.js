@@ -21,6 +21,7 @@ import 'echarts/lib/component/legend'
 // 设置反向代理，前端请求默认发生到http://localhost:8888
 var axios = require('axios');
 
+
 axios.defaults.baseURL = process.env.API_ROOT;
 // 全局注册，之后在其他组件中通过this.$axios发送数据
 Vue.prototype.$axios = axios;
