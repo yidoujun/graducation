@@ -31,6 +31,7 @@ public class ShowController {
             names.add("裤子");
             names.add("高跟鞋");
             names.add("袜子");
+            names.add("测试");
             List<Integer> values = new ArrayList<Integer>();
             values.add(5);
             values.add(20);
@@ -38,6 +39,7 @@ public class ShowController {
             values.add(10);
             values.add(10);
             values.add(20);
+            values.add(30);
             Map<String, List<?>> map = new HashMap<>();
             map.put("names", names);
             map.put("values", values);
