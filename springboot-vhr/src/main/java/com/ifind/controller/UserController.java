@@ -1,5 +1,7 @@
 package com.ifind.controller;
 
+import com.ifind.common.response.JSONUtils;
+import com.ifind.common.response.JsonResult;
 import com.ifind.entity.User;
 import com.ifind.service.UserService;
 import com.ifind.util.ResponseVO;
@@ -26,14 +28,14 @@ public class UserController {
     @CrossOrigin
     @RequestMapping("/test")
     @ResponseBody
-    public ResponseVO test() {
+    public JsonResult test() {
         Long id = 1L;
         User user = userService.getUser(id);
         try {
-            return ResultUtil.success("成功", user);
+            return new JsonResult(user);
         } catch (Exception e){
             log.error(e.getMessage(), e);
-            return ResultUtil.error("操作失败!");
+            return JsonResult.buildBizError("-4000", "失败");
         }
 
     }

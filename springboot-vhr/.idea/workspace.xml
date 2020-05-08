@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28916416-e956-4e9a-98e5-c373dee74729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/aop/CustomLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/KeyConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/BizCodeConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/CommonCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/CommonCodeConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/JSONUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/JsonResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/util/RedisUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-vhr.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/DataApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/DataApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/DataApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/DataApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/ShowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/controller/ShowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,8 +71,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springboot-vuehr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/ifind/util" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mygit\springboot-vhr\src\main\java\com\ifind\util" />
+      <recent name="D:\mygit\springboot-vhr\src\main\java\com\ifind\common\config" />
+      <recent name="D:\mygit\springboot-vhr\src\main\java\com\ifind\common\constants" />
+      <recent name="D:\mygit\springboot-vhr\src\main\java\com\ifind\common\base" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -105,6 +136,10 @@
       <workItem from="1587647830714" duration="623000" />
       <workItem from="1587968947446" duration="62000" />
       <workItem from="1588866823670" duration="1359000" />
+      <workItem from="1588868979433" duration="849000" />
+      <workItem from="1588892769672" duration="734000" />
+      <workItem from="1588894593795" duration="4281000" />
+      <workItem from="1588947923775" duration="6152000" />
     </task>
     <task id="LOCAL-00001" summary="说明：地图展示新增空格">
       <created>1588867246864</created>
@@ -113,7 +148,35 @@
       <option name="project" value="LOCAL" />
       <updated>1588867246864</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="说明：地图展示删除空格">
+      <created>1588869046976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588869046976</updated>
+    </task>
+    <task id="LOCAL-00003" summary="说明：新增数据">
+      <created>1588869429723</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588869429723</updated>
+    </task>
+    <task id="LOCAL-00004" summary="说明：新增Mysql数据库">
+      <created>1588898329902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588898329902</updated>
+    </task>
+    <task id="LOCAL-00005" summary="说明：新增User">
+      <created>1588898562720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588898562720</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +187,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -134,7 +199,11 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="说明：地图展示新增空格" />
-    <option name="LAST_COMMIT_MESSAGE" value="说明：地图展示新增空格" />
+    <MESSAGE value="说明：地图展示删除空格" />
+    <MESSAGE value="说明：新增数据" />
+    <MESSAGE value="说明：新增Mysql数据库" />
+    <MESSAGE value="说明：新增User" />
+    <option name="LAST_COMMIT_MESSAGE" value="说明：新增User" />
   </component>
   <component name="WindowStateProjectService">
     <state x="174" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
@@ -173,5 +242,16 @@
     <state x="166" y="192" key="new project wizard/0.0.1440.860@0.0.1440.860" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -34,7 +34,7 @@
         // 获取数据
         getData() {
           this.$axios
-            .post('/api/getData')
+            .post('/user/test')
             .then(res => {
               if (res) {
                 this.show1(res.data.data)
