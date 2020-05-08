@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ifind.dao.UserDao">
+
+    <sql id="user">
+        id,user_name AS userName, pwd, mobile
+    </sql>
+
+    <select id="getById" parameterType="java.lang.Long"
+            resultType="com.ifind.entity.User">
+        SELECT
+            <include refid="user"></include>
+        FROM
+            t_user
+        WHERE
+            id = #{id}
+    </select>
+
+
+</mapper>
