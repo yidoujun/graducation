@@ -1,8 +1,7 @@
 package com.ifind.controller;
 
+import com.ifind.common.response.JsonResult;
 import com.ifind.entity.Job;
-import com.ifind.util.ResponseVO;
-import com.ifind.util.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +21,7 @@ public class ShowController {
     @CrossOrigin
     @RequestMapping("/getData")
     @ResponseBody
-    public ResponseVO getData(){
+    public JsonResult getData(){
         try{
             List<String> names = new ArrayList<String>();
             names.add("衬衫");
@@ -44,18 +43,17 @@ public class ShowController {
             map.put("names", names);
             map.put("values", values);
             System.out.println("跨域成功");
-            ResponseVO test = ResultUtil.success("操作成功", map);
-            return ResultUtil.success("操作成功", map);
+            return new JsonResult(map);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return ResultUtil.error("操作失败");
+            return JsonResult.buildBizError("-4000", "操作失败");
         }
     }
 
     @CrossOrigin
     @RequestMapping("/getChina")
     @ResponseBody
-    public ResponseVO chinaShow() {
+    public JsonResult chinaShow() {
         Job job1 = new Job();
         job1.setId(1);
         job1.setProvinceName("湖南");
@@ -69,10 +67,10 @@ public class ShowController {
         list.add(job2);
         try {
             System.out.println("跨域成功");
-            return ResultUtil.success("操作成功", list);
+            return new JsonResult(list);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            return ResultUtil.error("操作失败!");
+            return JsonResult.buildBizError("-4000", "操作失败");
         }
     }
 }

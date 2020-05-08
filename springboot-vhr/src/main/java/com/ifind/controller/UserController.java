@@ -1,11 +1,8 @@
 package com.ifind.controller;
 
-import com.ifind.common.response.JSONUtils;
 import com.ifind.common.response.JsonResult;
 import com.ifind.entity.User;
 import com.ifind.service.UserService;
-import com.ifind.util.ResponseVO;
-import com.ifind.util.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
