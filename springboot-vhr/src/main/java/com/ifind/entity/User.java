@@ -2,6 +2,8 @@ package com.ifind.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 用户实体类
  *
@@ -9,8 +11,9 @@ import lombok.Data;
  * @date 2020/5/8 8:18
  */
 @Data
-public class User {
+public class User implements Serializable {
 
+    private static final long serialVersionUID = -6959603157147685396L;
     /**
      * 主键
      */

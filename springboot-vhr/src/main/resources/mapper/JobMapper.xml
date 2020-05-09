@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ifind.dao.JobDao">
+
+    <sql id="list_fields">
+        t1.id AS id,
+        t1.job_position AS jobPosition,
+        t1.job_company AS jobCompany,
+        t1.job_address AS jobAddress,
+        t1.job_years AS jobYears,
+        t1.job_education AS jobEducation,
+        t1.company_num AS companyNum,
+        t1.company_business AS companyBusiness,
+        t1.job_detail AS jobDetail,
+        t1.city_level AS cityLevel,
+        t1.location AS location,
+        t1.companyNum_standard AS companyNumStandard,
+        t1.education AS education,
+        t1.jobYear AS jobYear,
+        t1.salary_interval AS salaryInterval,
+        t1.salary_average AS salaryAverage,
+        t1.company_industry AS companyIndustry,
+        t1.cluster AS cluster
+    </sql>
+
+    <sql id="page_fields">
+        t1.id AS id,
+        t1.city_level AS cityLevel,
+        t1.location AS location,
+        t1.companyNum_standard AS companyNumStandard,
+        t1.education AS education,
+        t1.jobYear AS jobYear,
+        t1.salary_interval AS salaryInterval,
+        t1.salary_average AS salaryAverage,
+        t1.company_industry AS companyIndustry,
+        t1.cluster AS cluster
+    </sql>
+
+    <select id="getAllJob" resultType="com.ifind.entity.Job">
+        SELECT
+            <include refid="page_fields"></include>
+        FROM
+            t_jobs t1
+        LIMIT 0, 100
+    </select>
+
+
+
+</mapper>

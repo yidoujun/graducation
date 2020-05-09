@@ -17,21 +17,50 @@ public class Job implements Serializable {
      * id
      */
     private Integer id;
+
     /**
-     * 省份名字
+     * 岗位名称
      */
-    private String provinceName;
+    private String jobPosition;
+
     /**
-     * 城市名字
+     * 企业名称
      */
-    private String cityName;
+    private String jobCompany;
+
     /**
-     * 省份包含数量
+     * 工作地点
      */
-    private Integer provinceNum;
-    /**
-     * 城市包含数量
-     */
-    private Integer cityNum;
+    private String jobAddress;
+
+    private String jobWelfare;
+
+    private String jobYears;
+
+    private String jobEducation;
+
+    private String companyNum;
+
+    private String companyBusiness;
+
+    private String jobDetail;
+
+    private String cityLevel;
+
+    private String location;
+
+    private String companyNumStandard;
+
+    private String education;
+
+    private String jobYear;
+
+    private String salaryInterval;
+
+    private Double salaryAverage;
+
+    private String companyIndustry;
+
+    private Integer cluster;
 
 }
