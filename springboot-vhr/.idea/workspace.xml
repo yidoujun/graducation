@@ -2,29 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28916416-e956-4e9a-98e5-c373dee74729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/aop/CustomLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/KeyConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/BizCodeConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/CommonCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/CommonCodeConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/JSONUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/response/JsonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/util/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/exception/CustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/exception/ResultStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/JobShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/JobVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/util/CommonUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/DataApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/DataApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/KeyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/KeyConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/entity/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/JobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/CommonConst.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/util/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/ResponseStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/ResponseVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/ResultUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/DataApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/DataApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/ShowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/controller/ShowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/common/constants/KeyConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/common/constants/KeyConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/ShowController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/entity/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/entity/Job.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/CommonConst.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/util/RedisUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/ResponseStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/ResponseVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/ResultUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/config/dev.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/ShowFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/ShowFooter.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -71,6 +83,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/ifind/util" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -139,7 +152,12 @@
       <workItem from="1588868979433" duration="849000" />
       <workItem from="1588892769672" duration="734000" />
       <workItem from="1588894593795" duration="4281000" />
-      <workItem from="1588947923775" duration="6152000" />
+      <workItem from="1588947923775" duration="6787000" />
+      <workItem from="1588982088764" duration="2278000" />
+      <workItem from="1588985106465" duration="638000" />
+      <workItem from="1589017638808" duration="1575000" />
+      <workItem from="1589019664081" duration="1114000" />
+      <workItem from="1589068261610" duration="24387000" />
     </task>
     <task id="LOCAL-00001" summary="说明：地图展示新增空格">
       <created>1588867246864</created>
@@ -176,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588898562720</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="说明：统一返回接口">
+      <created>1588954759403</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588954759404</updated>
+    </task>
+    <task id="LOCAL-00007" summary="说明：新增job类">
+      <created>1588985712028</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588985712028</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +235,9 @@
     <MESSAGE value="说明：新增数据" />
     <MESSAGE value="说明：新增Mysql数据库" />
     <MESSAGE value="说明：新增User" />
-    <option name="LAST_COMMIT_MESSAGE" value="说明：新增User" />
+    <MESSAGE value="说明：统一返回接口" />
+    <MESSAGE value="说明：新增job类" />
+    <option name="LAST_COMMIT_MESSAGE" value="说明：新增job类" />
   </component>
   <component name="WindowStateProjectService">
     <state x="174" y="84" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
@@ -249,7 +283,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java</url>
           <line>30</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

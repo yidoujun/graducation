@@ -1,8 +1,10 @@
 package com.ifind.service;
 
 import com.ifind.entity.Job;
+import com.ifind.entity.JobShow;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * jobService
@@ -12,4 +14,10 @@ import java.util.List;
  */
 public interface JobService {
     List<Job> getAllJob();
+
+    List<JobShow> getCityAndNum(String isFlag);
+
+    List<JobShow> getIndustryAndPosition(String isFlag);
+
+    List<JobShow> getEducationAndPosition(String isFlag);
 }

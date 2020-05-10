@@ -18,4 +18,9 @@ public class KeyConstants {
      */
     public final static String JOB_ALL_INFO = "job_all_info:";
 
+    /**
+     * 岗位信息
+     */
+    public static final String JOB_INFO = "job_info:";
+
 }
