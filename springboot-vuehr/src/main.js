@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import iView from "iview"
-// import 'iview/dist/styles/iview.css'  // 使用CSS
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-chalk/icon.css';    // 默认icon
+import utils from "@/util/utils";
 
 // 全局引入Echarts
 import * as echarts from 'echarts/lib/echarts'

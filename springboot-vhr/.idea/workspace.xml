@@ -2,40 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28916416-e956-4e9a-98e5-c373dee74729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/exception/CustomException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/exception/ResultStatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/JobShow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/JobVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/util/CommonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/EducationAndJobNum.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/KeyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/constants/KeyConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/entity/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/JobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/CommonConst.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/util/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/ResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/ResponseVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/util/ResultUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/common/constants/KeyConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/common/constants/KeyConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/ShowController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/entity/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/entity/Job.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/CommonConst.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/RedisUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/util/RedisUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/ResponseStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/ResponseVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/util/ResultUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/config/dev.env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/ShowFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/ShowFooter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,6 +128,7 @@
       <workItem from="1589017638808" duration="1575000" />
       <workItem from="1589019664081" duration="1114000" />
       <workItem from="1589068261610" duration="24387000" />
+      <workItem from="1589294694757" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="说明：地图展示新增空格">
       <created>1588867246864</created>

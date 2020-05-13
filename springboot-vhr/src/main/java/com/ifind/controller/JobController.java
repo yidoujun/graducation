@@ -44,7 +44,7 @@ public class JobController {
     }
 
     /**
-     * 柱状图展示个行业招聘职位数量关系图
+     * 饼图展示个行业招聘职位数量关系图
      *
      * @param isFlag    redis缓存的key后缀
      * @return
