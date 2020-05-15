@@ -3,5 +3,7 @@ package com.ifind.service;
 import com.ifind.entity.User;
 
 public interface UserService {
-    User getUser(Long id);
+    User getUser(User user);
+
+    int insert(User rUser);
 }

@@ -75,4 +75,16 @@ public class JobController {
 //        List<JobShow> list = jobService.
         return null;
     }
+
+    @CrossOrigin
+    @RequestMapping("/nev")
+    @ResponseBody
+    public JsonResult nev(){
+        List<String> nev = new ArrayList<>();
+        nev.add("职位关系");
+        nev.add("薪资关系");
+        nev.add("平均关系");
+        nev.add("企业类别");
+        return new JsonResult(nev);
+    }
 }

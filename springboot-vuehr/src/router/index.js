@@ -4,12 +4,15 @@ import Router from 'vue-router'
 // import Show from '@/components/Show'
 // import ChinaMapShow from '@/components/ChinaMapShow'
 // const HelloWorld = () => import('@/components/HelloWorld');
+const Login = () => import('@/components/common/Login');
+const Register = () => import('@/components/common/Register');
+const Home = () => import('@/components/common/Home');
+const HeadTop = () => import('@/components/common/HeadTop');
+const NavMenu = () => import('@/components/common/NavMenu');
+const First = () => import('@/components/First');
 const Show = () => import('@/components/Show');
 const ChinaMapShow = () => import('@/components/ChinaMapShow');
-const Index = () => import('@/components/Index');
-const Login = () => import('@/components/Login');
 const EducationAndJobNum = () => import('@/components/EducationAndJobNum');
-const Home = () => import('@/components/common/Home');
 
 Vue.use(Router);
 
@@ -18,18 +21,40 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/index',
-      name: 'Index',
-      component: Index
-    },
-    {
-      path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      meta: {title: '首页', requireAuth: true},
+      children: [
+        {
+          path: '/home/first',
+          name: 'First',
+          component: First,
+          meta: { requireAuth:true },
+        }
+      ]
+    },
+    {
+      path:"/register",
+      name:"Register",
+      component: Register,
+      meta:{ requireAuth:false}
+    },
+    {
+      path:"/headTop",
+      name:"HeadTop",
+      component: HeadTop,
+      meta:{ requireAuth:true}
+    },
+    {
+      path:"/navMenu",
+      name:"NavMenu",
+      component: NavMenu,
+      meta:{ requireAuth:true}
     },
     {
       path: '/show',

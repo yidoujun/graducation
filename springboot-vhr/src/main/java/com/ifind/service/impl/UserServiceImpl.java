@@ -8,7 +8,6 @@ import com.ifind.service.UserService;
 import com.ifind.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 
 /**
  * 用户ServiceImpl
@@ -25,17 +24,37 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RedisUtil redisUtil;
 
+    /**
+     * 获取用户信息
+     *
+     * @param user
+     * @return
+     */
     @Override
-    public User getUser(Long id) {
-        String key = KeyConstants.USER_INFO + String.valueOf(id);
-        Object obj = redisUtil.get(key);
-        if (obj != null) {
-            return (User)obj;
+    public User getUser(User user) {
+        String key = KeyConstants.USER_INFO + user.getUserName();
+        if (redisUtil.hasKey(key)) {
+            return (User)redisUtil.get(key);
         } else {
-            User user = userDao.getById(id);
-            // 添加缓存
-            redisUtil.set(key, user, Status.ExpireEnum.PICTURE_DATA.getTime());
-            return user;
+            User u = userDao.getUser(user);
+            if(u != null) {
+                // 添加缓存
+                redisUtil.set(key, user, Status.ExpireEnum.PICTURE_DATA.getTime());
+                return user;
+            }
+            return null;
         }
+    }
+
+    /**
+     * 添加用户
+     *
+     * @param rUser
+     * @return
+     */
+    @Override
+    public int insert(User rUser) {
+        // 密码加密
+        return userDao.insert(rUser);
     }
 }

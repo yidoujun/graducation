@@ -5,10 +5,9 @@ import com.ifind.entity.User;
 import com.ifind.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/user")
@@ -19,20 +18,57 @@ public class UserController {
     private UserService userService;
 
     /**
+     * 登录
      *
+     * @param rUser                     用户信息
+     * @param httpSession               session信息
      * @return
      */
     @CrossOrigin
-    @RequestMapping("/test")
+    @RequestMapping("/login")
     @ResponseBody
-    public JsonResult test() {
-        Long id = 1L;
-        User user = userService.getUser(id);
-        try {
-            return new JsonResult(user);
-        } catch (Exception e){
-            log.error(e.getMessage(), e);
-            return JsonResult.buildBizError("-4000", "失败");
+    public JsonResult login(@RequestBody User rUser, HttpSession httpSession) {
+        User user = userService.getUser(rUser);
+        if (user == null) {
+            return JsonResult.buildBizError("-40000", "用户名或密码错误");
+        }
+        httpSession.setAttribute("user", user);
+        return new JsonResult(user);
+    }
+
+    /**
+     * 登出
+     *
+     * @param httpSession            session信息
+     * @return
+     */
+    @CrossOrigin
+    @RequestMapping("/logout")
+    @ResponseBody
+    public JsonResult loginOut(HttpSession httpSession) {
+        httpSession.removeAttribute("user");
+        return JsonResult.buildSuccess("成功退出");
+    }
+
+    /**
+     * 注册
+     *
+     * @param rUser                 用户信息
+     * @return
+     */
+    @CrossOrigin
+    @RequestMapping("/register")
+    @ResponseBody
+    public JsonResult register(@RequestBody User rUser) {
+        User user = userService.getUser(rUser);
+        if (user != null) {
+            return JsonResult.buildBizError("-40000", "用户已存在！");
+        }
+        int count = userService.insert(rUser);
+        if (count > 0) {
+            return JsonResult.buildSuccess();
+        } else {
+            return JsonResult.buildBizError("-40000", "注册失败！");
         }
 
     }

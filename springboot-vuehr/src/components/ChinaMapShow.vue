@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    require('echarts/map/js/province/beijing');   // 引入北京地图
-    require('echarts/map/js/province/zhejiang');  // 引入浙江地图
-    require('echarts/map/js/province/hunan');     // 引入湖南地图
+    // require('echarts/map/js/province/beijing');   // 引入北京地图
+    // require('echarts/map/js/province/zhejiang');  // 引入浙江地图
+    // require('echarts/map/js/province/hunan');     // 引入湖南地图
     // require('echarts/map/json/china-cities');     // 引入中国城市
     import city from 'echarts/map/json/china-cities'
     export default {

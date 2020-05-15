@@ -7,6 +7,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface UserDao {
+    /**
+     * 查询用户
+     * @param user
+     * @return
+     */
+    User getUser(User user);
 
-    User getById(Long id);
+    int insert(User rUser);
 }

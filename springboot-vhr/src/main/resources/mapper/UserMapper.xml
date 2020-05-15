@@ -9,15 +9,32 @@
         t1.mobile AS mobile
     </sql>
 
-    <select id="getById" parameterType="java.lang.Long"
+    <select id="getUser" parameterType="com.ifind.entity.User"
             resultType="com.ifind.entity.User">
         SELECT
             <include refid="list_fields"></include>
         FROM
             t_user t1
-        WHERE
-            t1.id = #{id}
+        <where>
+            t1.isvalid = 1
+            <if test="id != null">
+                AND t1.id = #{id}
+            </if>
+            <if test="userName != null and userName != ''">
+                AND t1.user_name = #{userName}
+            </if>
+            <if test="pwd != null and pwd != ''">
+                AND t1.pwd = #{pwd}
+            </if>
+        </where>
     </select>
+
+    <insert id="insert" parameterType="com.ifind.entity.User">
+        INSERT INTO t_user
+        (user_name, pwd, mobile, isvalid, ctime, mtime)
+        VALUES
+        (#{userName}, #{pwd}, #{mobile}, 1, now(), now())
+    </insert>
 
 
 </mapper>
