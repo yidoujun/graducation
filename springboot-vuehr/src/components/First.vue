@@ -2,13 +2,13 @@
   <div class="first">
     <div class="message">
       <el-row :gutter="20">
-        <!--<el-col :span="6">
+        <el-col :span="6">
           <div>
             <el-card style="position: relative;" class="elcard1">
               <div class="card">
                 <div class="something">
-                  <span class="s1">{{materialL}}</span>
-                  <span class="s2">物资审批</span>
+                  <span class="s1">{{job58}}</span>
+                  <span class="s2">前程无忧爬取数据</span>
                   <i class="el-icon-truck" style="color: #00CCFF;"></i>
                 </div>
 
@@ -23,8 +23,8 @@
             <el-card style="position: relative;" class="elcard1">
               <div class="card">
                 <div class="something">
-                  <span class="s1">350</span>
-                  <span class="s2">库存余量</span>
+                  <span class="s1">{{liepin}}</span>
+                  <span class="s2">猎聘网爬取数据</span>
                   <i class="el-icon-s-home" style=" color:#EB7347"></i>
                 </div>
 
@@ -39,8 +39,8 @@
             <el-card style="position: relative;" class="elcard1">
               <div class="card">
                 <div class="something">
-                  <span class="s1">{{userL}}</span>
-                  <span class="s2">用户</span>
+                  <span class="s1">{{dataDeal}}</span>
+                  <span class="s2">数据处理数据</span>
                   <i class="el-icon-user" style="color: #26A65B"></i>
                 </div>
 
@@ -55,16 +55,16 @@
             <el-card style="position: relative;" class="elcard1">
               <div class="card">
                 <div class="something">
-                  <span class="s1">3</span>
-                  <span class="s2">在线人数</span>
+                  <span class="s1">{{type}}</span>
+                  <span class="s2">企业分类</span>
                   <i class="el-icon-loading" style="color: #daa520"></i>
                 </div>
 
-                <el-progress :percentage="30" :format="format" color="green"></el-progress>
+                <el-progress :percentage="30" color="green"></el-progress>
               </div>
             </el-card>
           </div>
-        </el-col>-->
+        </el-col>
       </el-row>
     </div>
 
@@ -72,23 +72,29 @@
       <el-row :gutter="20">
         <el-col :span="12">
           <el-card>
-            <div id="myChart" :style="{width: '100%', height: '400px'}" ref="echarts-one"></div>
+            <div :style="{width: '100%', height: '400px'}" ref="echarts-one"></div>
           </el-card>
         </el-col>
-
         <el-col :span="12">
           <el-card>
-            <div id="myChart2" :style="{width: '100%', height: '400px'}" ref="echarts-two"></div>
+            <div :style="{width: '100%', height: '400px'}" ref="echarts-two"></div>
+          </el-card>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="24">
+          <el-card>
+            <div :style="{width: '100%', height: '900px'}" ref="echarts-three"></div>
           </el-card>
         </el-col>
       </el-row>
     </div>
 
-    <div class="welcome">
-      <!--<el-card class="elcard20">
+    <!--<div class="welcome">
+      <el-card class="elcard20">
         <div class="text2">WELCOME</div>
-      </el-card>-->
-    </div>
+      </el-card>
+    </div>-->
   </div>
 </template>
 
@@ -98,8 +104,10 @@
         data() {
             return {
                 value: new Date(),
-                materialL: "XXXX",
-                userL: "XXXXX"
+                job58: 5980,
+                liepin: 7852,
+                dataDeal: 6163,
+                type: 4
             };
         },
         components: {},
@@ -118,16 +126,119 @@
             },
             // 获取数据
             async getData() {
-                let [chinaImg, industryImg] = await Promise.all([
+                let [chinaImg, industryImg, educationImg] = await Promise.all([
                     this._requestImg("/job/getChina", {isFlag: 1}),
                     this._requestImg("/job/getIndustry", {isFlag: 2}),
+                    this._requestImg("/job/getEducation", {isFlag: 3}),
                 ]).catch((err) => alert(err));
                 this.show(industryImg);
                 this.chinamap(chinaImg);
+                this.educationAndJob(educationImg);
             },
+            // 展示学历与职位的关系
+            educationAndJob(echartsData) {
+                // 初始化
+                let myChart = this.$echarts.init(this.$refs['echarts-one']);
+                let names = [];
+                let values = [];
+                echartsData.forEach((item) => {
+                    names.push(item.name);
+                    values.push(item.values);
+                });
+                // 绘制图形
+                let option = {
+                    // 配置标题信息
+                    title: {
+                        text: "学历与职位数量关系图",
+                        textStyle: {
+                            color: "#000000",
+                            fontWeight: "bolder"
+                        },
+                        left: "center"
+                    },
+                    //
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow',
+                            label: true
+                        }
+                    },
+                    // 配置横坐标
+                    xAxis: {
+                        type: "category",
+                        data: names,
+                        itemStyle: {
+                            narmal: {
+                                color: "orange"
+                            }
+                        }
+                    },
+                    // 配置纵坐标
+                    yAxis: {
+                        type: "value"
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            magicType: {
+                                show: true,
+                                type: ['line', 'bar']
+                            },
+                            restore: {
+                                show: true
+                            },
+                            saveAsImage: {
+                                show: true
+                            }
+                        }
+                    },
+                    series: [{
+                        name: "职位数",
+                        type: 'bar',
+                        data: values,
+                        barWidth: "70%",
+                        itemStyle: {
+                            normal: {
+                                // 每根柱子颜色设置
+                                color: function (params) {
+                                    let colorList = [
+                                        "#c23531",
+                                        "#2f4554",
+                                        "#61a0a8",
+                                        "#d48265",
+                                        "#91c7ae",
+                                        "#749f83",
+                                        "#ca8622",
+                                        "#bda29a",
+                                        "#6e7074",
+                                    ];
+                                    return colorList[params.dataIndex];
+                                }
+                            }
+                        },
+                        // 柱状图上显示数据
+                        label: {
+                            show: "true",
+                            position: "top",
+                            color: "#FFF",
+                            fontWeight: "bolder",
+                            backgroundColor: "auto",
+                            fontSize: "20"
+                        },
+                        // 平均值
+                        markLine: {
+                            data: [{type: "average", name: "平均值"}]
+                        }
+                    }],
+                };
+                // 使用刚指定的配置项和数据显示图表
+                myChart.setOption(option);
+            },
+            // 展示各行业职位的关系
             show(echartsData) {
                 // 基于准备好的dom，初始化echarts实例化
-                var myChart = this.$echarts.init(this.$refs['echarts-one']);
+                var myChart = this.$echarts.init(this.$refs['echarts-two']);
                 var names = [];
                 var values = [];
                 echartsData.forEach((item, i) => {
@@ -137,6 +248,15 @@
                 var dealData = this.dataFormat(echartsData);
                 // 绘制图表
                 var option = {
+                    // 配置标题信息
+                    title: {
+                        text: "各行业招聘数量关系图",
+                        textStyle: {
+                            color: "#000000",
+                            fontWeight: "bolder"
+                        },
+                        left: "center"
+                    },
                     tooltip: {
                         trigger: 'item',
                         formatter: '{a} <br/>{b}: {c} ({d}%)'
@@ -172,9 +292,10 @@
                 };
                 myChart.setOption(option);
             },
+            // 中国地图展示各城市的招聘数量
             chinamap(chinaData) {
                 // 基于准备好的dom，初始化echarts实例化
-                var myChart = this.$echarts.init(this.$refs['echarts-two']);
+                var myChart = this.$echarts.init(this.$refs['echarts-three']);
                 var geoCoordMap = {};
                 var mapName = 'china';
                 myChart.showLoading();
@@ -190,7 +311,6 @@
                     var res = [];
                     data.forEach((item, i) => {
                         var geoCoord = geoCoordMap[item.name];
-                        console.log(geoCoord);
                         if (geoCoord) {
                             res.push({
                                 name:item.name,
@@ -201,9 +321,17 @@
                     });
                     return res;
                 };
-                console.log("============")
                 window.onresize = myChart.resize;
                 var options = {
+                    // 配置标题信息
+                    title: {
+                        text: "中国数据类相关岗位招聘数量图",
+                        textStyle: {
+                            color: "#000000",
+                            fontWeight: "bolder"
+                        },
+                        left: "center"
+                    },
                     backgroundColor: "transparent",
                     tooltip: {
                         trigger: "item",
@@ -357,13 +485,19 @@
 
         },
         mounted() {
-            // this._requestImg(url, params);
             this.getData();
         }
     };
 </script>
 
 <style>
+
+  .el-row {
+    margin-bottom: 20px;
+  }
+  .el-col {
+    border-radius: 4px;
+  }
 
   .el-carousel__item h3 {
     color: #475669;

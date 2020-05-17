@@ -67,4 +67,5 @@ public class Job implements Serializable {
      */
     private Integer cluster;
 
+    private String sort;
 }

@@ -4,30 +4,30 @@
     <el-container style="height: 100%">
       <div style="border-right:1px solid #dcdfe6;" :style="height" class="left">
         <el-aside width="200px">
-          <el-menu>
+          <el-menu :default-active="this.$router.path" router>
             <el-menu-item index="/home/first">
               <i class="el-icon-odometer"></i>
-              <span slot="title">物资采购系统</span>
+              <span slot="title">数据类岗位分析系统</span>
             </el-menu-item>
 
             <el-submenu index="2">
               <template slot="title">
                 <i class="el-icon-aim"></i>
-                <span>系统管理</span>
+                <span>职位分析</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="/home/peopleTable">人员管理</el-menu-item>
+                <el-menu-item index="Educationjob">学历-职位关系</el-menu-item>
               </el-menu-item-group>
 
               <el-menu-item-group>
-                <el-menu-item index="/home/deptList">部门管理</el-menu-item>
+                <el-menu-item index="CityLevelJob">X线城市-职位关系</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
 
             <el-submenu index="3">
               <template slot="title">
                 <i class="el-icon-truck"></i>
-                <span>物资管理</span>
+                <span>薪资分析</span>
               </template>
 
               <el-menu-item-group>
@@ -46,7 +46,7 @@
             <el-submenu index="4">
               <template slot="title">
                 <i class="el-icon-shopping-bag-1"></i>
-                <span>采购管理</span>
+                <span>平均薪资分析</span>
               </template>
               <el-menu-item-group>
                 <el-menu-item index="/home/needPlan">需求计划申请</el-menu-item>
@@ -68,7 +68,7 @@
             <el-submenu index="5">
               <template slot="title">
                 <i class="el-icon-refresh"></i>
-                <span>出入库管理</span>
+                <span>福利分析</span>
               </template>
               <el-menu-item-group>
                 <el-menu-item index="/home/No">物资接收</el-menu-item>
@@ -90,7 +90,7 @@
             <el-submenu index="6">
               <template slot="title">
                 <i class="el-icon-house"></i>
-                <span>仓库管理</span>
+                <span>企业词云图</span>
               </template>
               <el-menu-item-group>
                 <el-menu-item index="/home/No">仓库维护</el-menu-item>

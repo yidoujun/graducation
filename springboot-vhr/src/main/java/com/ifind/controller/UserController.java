@@ -21,7 +21,6 @@ public class UserController {
      * 登录
      *
      * @param rUser                     用户信息
-     * @param httpSession               session信息
      * @return
      */
     @CrossOrigin
@@ -32,7 +31,7 @@ public class UserController {
         if (user == null) {
             return JsonResult.buildBizError("-40000", "用户名或密码错误");
         }
-        httpSession.setAttribute("user", user);
+        httpSession.setAttribute("user", user.getUserName());
         return new JsonResult(user);
     }
 
@@ -59,7 +58,7 @@ public class UserController {
     @CrossOrigin
     @RequestMapping("/register")
     @ResponseBody
-    public JsonResult register(@RequestBody User rUser) {
+    public JsonResult register(@RequestBody  User rUser) {
         User user = userService.getUser(rUser);
         if (user != null) {
             return JsonResult.buildBizError("-40000", "用户已存在！");

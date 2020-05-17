@@ -2,55 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28916416-e956-4e9a-98e5-c373dee74729" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/config/ConfigAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/WechatIMG2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/WechatIMG3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/loginbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/logoko (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/logoko2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/logoko3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/First.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/store/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ifind/common/Common.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/CityLevelJob.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Educationjob.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/controller/JobController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/dao/JobDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/dao/JobDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/entity/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/entity/JobShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/entity/JobShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifind/service/impl/JobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/JobMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/JobController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/controller/JobController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/api/account.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/403.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/404.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/dao/JobDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/dao/JobDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/entity/JobShow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/entity/JobShow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/service/JobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/service/JobService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifind/service/impl/JobServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifind/service/impl/JobServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/config/dev.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/config/dev.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/config/prod.env.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/config/prod.env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/ChinaMapShow.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/EducationAndJobNum.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/First.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/First.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/Show.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/NavMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/NavMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/ShowFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/HeadTop.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/ShowHeader.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Sidebar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/components/common/Tags.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springboot-vuehr/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-vuehr/src/router/index.js" afterDir="false" />
     </list>
@@ -101,7 +81,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="D:/Work/dbblog-manage-frontend" />
+    <property name="last_opened_file_path" value="C:/web/dugen" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -182,7 +162,10 @@
       <workItem from="1589464890405" duration="5268000" />
       <workItem from="1589499882971" duration="799000" />
       <workItem from="1589501673430" duration="804000" />
-      <workItem from="1589536710097" duration="450000" />
+      <workItem from="1589536710097" duration="5400000" />
+      <workItem from="1589604404783" duration="9189000" />
+      <workItem from="1589674284040" duration="1462000" />
+      <workItem from="1589676266377" duration="8613000" />
     </task>
     <task id="LOCAL-00001" summary="说明：地图展示新增空格">
       <created>1588867246864</created>

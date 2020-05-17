@@ -1,18 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-// import Show from '@/components/Show'
-// import ChinaMapShow from '@/components/ChinaMapShow'
-// const HelloWorld = () => import('@/components/HelloWorld');
+
 const Login = () => import('@/components/common/Login');
 const Register = () => import('@/components/common/Register');
 const Home = () => import('@/components/common/Home');
 const HeadTop = () => import('@/components/common/HeadTop');
 const NavMenu = () => import('@/components/common/NavMenu');
 const First = () => import('@/components/First');
-const Show = () => import('@/components/Show');
-const ChinaMapShow = () => import('@/components/ChinaMapShow');
-const EducationAndJobNum = () => import('@/components/EducationAndJobNum');
+const Educationjob = () => import('@/components/Educationjob');
+const CityLevelJob = () => import('@/components/CityLevelJob');
 
 Vue.use(Router);
 
@@ -34,8 +30,20 @@ export default new Router({
           path: '/home/first',
           name: 'First',
           component: First,
-          meta: { requireAuth:true },
-        }
+          meta: { title:'数据地图',requireAuth:true },
+        },
+        {
+          path: '/home/educationjob',
+          name: 'Educationjob',
+          component: Educationjob,
+          meta: { title:'学历-职位关系',requireAuth:true },
+        },
+        {
+          path: '/home/cityLevelJob',
+          name: 'CityLevelJob',
+          component: CityLevelJob,
+          meta: { title:'X线城市-职位关系',requireAuth:true },
+        },
       ]
     },
     {
@@ -55,21 +63,6 @@ export default new Router({
       name:"NavMenu",
       component: NavMenu,
       meta:{ requireAuth:true}
-    },
-    {
-      path: '/show',
-      name: 'Show',
-      component: Show
-    },
-    {
-      path: '/china',
-      name: 'ChinaMapShow',
-      component: ChinaMapShow
-    },
-    {
-      path: '/educationAndJob',
-      name: 'EducationAndJobNum',
-      component: EducationAndJobNum
     }
   ]
 })

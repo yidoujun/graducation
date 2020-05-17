@@ -21,13 +21,13 @@ public class JobController {
     @Autowired
     private JobService jobService;
 
-    @CrossOrigin
-    @RequestMapping("/getData")
-    @ResponseBody
-    public JsonResult getData(){
-        List<Job> jobs = jobService.getAllJob();
-        return new JsonResult(jobs);
-    }
+//    @CrossOrigin
+//    @RequestMapping("/getData")
+//    @ResponseBody
+//    public JsonResult getData(){
+//        List<Job> jobs = jobService.getAllJob();
+//        return new JsonResult(jobs);
+//    }
 
     /**
      * 中国地图展示各城市职位数量图
@@ -66,25 +66,65 @@ public class JobController {
     @CrossOrigin
     @RequestMapping("/getEducation")
     @ResponseBody
-    public JsonResult education(String isFlag) {
+    public JsonResult education(@RequestBody String isFlag) {
         List<JobShow> list = jobService.getEducationAndPosition(isFlag);
         return new JsonResult(list);
     }
 
-    public JsonResult cityLevel(String isFlag) {
-//        List<JobShow> list = jobService.
-        return null;
+    /**
+     * 展示X线城市与职位数量关系图
+     *
+     * @param isFlag   redis缓存的key后缀
+     * @return
+     */
+    @CrossOrigin
+    @RequestMapping("/getCityLevel")
+    @ResponseBody
+    public JsonResult cityLevel(@RequestBody String isFlag){
+        List<JobShow> list = jobService.getCityLevel(isFlag);
+        return new JsonResult(list);
     }
 
+    /**
+     * 展示区位与职位数量关系图
+     *
+     * @param isFlag    redis缓存的key后缀
+     * @return
+     */
     @CrossOrigin
-    @RequestMapping("/nev")
+    @RequestMapping("/getLocation")
     @ResponseBody
-    public JsonResult nev(){
-        List<String> nev = new ArrayList<>();
-        nev.add("职位关系");
-        nev.add("薪资关系");
-        nev.add("平均关系");
-        nev.add("企业类别");
-        return new JsonResult(nev);
+    public JsonResult location(@RequestBody String isFlag) {
+        List<JobShow> list = jobService.getLocation(isFlag);
+        return new JsonResult(list);
     }
+
+    /**
+     * 展示区位与职位数量关系图
+     *
+     * @param isFlag    redis缓存的key后缀
+     * @return
+     */
+    @CrossOrigin
+    @RequestMapping("/getWorkYear")
+    @ResponseBody
+    public JsonResult workYear(@RequestBody String isFlag) {
+        List<JobShow> list = jobService.getWordYear(isFlag);
+        return new JsonResult(list);
+    }
+
+    /**
+     * 展示平均薪资与职位数量关系图
+     *
+     * @param isFlag    redis缓存的key后缀
+     * @return
+     */
+    @CrossOrigin
+    @RequestMapping("/getSalaryInterval")
+    @ResponseBody
+    public JsonResult salaryInterval(@RequestBody String isFlag) {
+        List<JobShow> list = jobService.getSalaryInterval(isFlag);
+        return new JsonResult(list);
+    }
+
 }

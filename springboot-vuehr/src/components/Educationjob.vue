@@ -1,41 +1,60 @@
 <template>
-  <div id="china">
-    <div style="height: 500px; width:800px;" ref="echarts-three"></div>
-    <div>
-      <el-button @click="getData">按钮</el-button>
+  <div class="first">
+
+    <div class="dataChart">
+      <el-row :gutter="0">
+        <el-col :span="24">
+          <el-card>
+            <div :style="{width: '100%', height: '600px'}" ref="echarts-four"></div>
+          </el-card>
+        </el-col>
+
+      </el-row>
+    </div>
+
+    <div class="welcome">
+      <!--<el-card class="elcard20">
+        <div class="text2">WELCOME</div>
+      </el-card>-->
     </div>
   </div>
 </template>
 
 <script>
     export default {
-        name: "EducationAndJobNum",
-        data () {
+        data() {
+            name: "Educationjob";
             return {
 
-            }
+            };
         },
-        methods:{
-            getData() {
-                this.$axios
-                    .post("/job/getEducation", {isFlag: '3'})
-                    .then(res => {
-                        if (res) {
-                            this.educationAndJob(res.data.data);
-                            console.log("测试")
-                        }
-                    })
-                    .catch(err => {
-
-                    })
+        components: {},
+        created() {
+            let _this = this;
+        },
+        computed: {
+            dataFormat: () => (arr) => arr.map((i) =>
+                ({name: i.name, value: i.values}))
+        },
+        methods: {
+            _requestImg (url, params) {
+                return this.$axios
+                    .post(url, params)
+                    .then(({ data: {data} }) => data);
             },
-            // 图形展示方法
+            // 获取数据
+            async getData() {
+                let [echartsData] = await Promise.all([
+                    this._requestImg("/job/getEducation", {isFlag: 3}),
+                ]).catch((err) => alert(err));
+                this.educationAndJob(echartsData);
+            },
             educationAndJob(echartsData) {
                 // 初始化
-                let myChart = this.$echarts.init(this.$refs['echarts-three']);
+                let myChart = this.$echarts.init(this.$refs['echarts-four']);
                 let names = [];
                 let values = [];
-                echartsData.forEach((item, i) => {
+                echartsData.forEach((item) => {
                     names.push(item.name);
                     values.push(item.values);
                 });
@@ -128,11 +147,100 @@
                 };
                 // 使用刚指定的配置项和数据显示图表
                 myChart.setOption(option);
-            }
+            },
+        },
+        mounted() {
+            this.getData();
         }
     };
 </script>
 
-<style scoped>
+<style>
 
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0;
+  }
+
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .el-carousel__item:nth-child(2n + 1) {
+    background-color: #d3dce6;
+  }
+
+  .message {
+    margin-top: 10px;
+  }
+  .card {
+    height: 90px;
+  }
+  .something i {
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    top: 24px;
+  }
+  .something .s1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .something .s2 {
+    /* margin-left: 10px; */
+    display: block;
+    color: #909399;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .el-progress {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .dataChart {
+    margin-top: 20px;
+  }
+  .elcard20 {
+    height: 150px;
+    /* line-height: 150px; */
+    text-align: center;
+    /* padding-bottom: 50px; */
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .elcard20 span {
+    font-size: 100px;
+    margin-bottom: 50px;
+  }
+  .welcome {
+    margin-top: 20px;
+    height: 150px;
+  }
+  .span1 {
+    margin-right: 50px;
+    color: #e6a23c;
+  }
+  .span2 {
+    margin-right: 50px;
+    color: #67c23a;
+  }
+  .span3 {
+    color: #409eff;
+  }
+
+  .elcard20 .text2 {
+    background: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+    background-size: contain;
+    background-position: top left;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 9rem;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
 </style>

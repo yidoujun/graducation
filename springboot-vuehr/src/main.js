@@ -6,13 +6,13 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/icon.css';    // 默认icon
-import utils from "@/util/utils";
 import './assets/normalize.css'
 import store from "./store/store"
 
 // 全局引入Echarts
 import * as echarts from 'echarts/lib/echarts'
-import 'echarts/lib/chart/bar'        // 柱状图
+// import 'echarts/lib/chart/bar'        // 柱状图
+// import 'echarts/lib/chart/scatter'
 import 'echarts/map/js/china'         // 中国地图
 // 引入提示框组件、标题组件、工具箱、legend组件
 import 'echarts/lib/component/tooltip'

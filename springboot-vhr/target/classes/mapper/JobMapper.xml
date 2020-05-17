@@ -37,11 +37,14 @@
         t1.cluster AS cluster
     </sql>
 
-    <select id="getAllJob" resultType="com.ifind.entity.Job">
+    <select id="getAllJob" parameterType="java.lang.String"
+            resultType="com.ifind.entity.Job">
         SELECT
             <include refid="page_fields"></include>
         FROM
             t_jobs t1
+        ORDER BY salary_average
+
     </select>
 
 

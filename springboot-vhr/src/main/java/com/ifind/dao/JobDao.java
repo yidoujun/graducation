@@ -16,5 +16,5 @@ import java.util.List;
 @Mapper
 public interface JobDao {
 
-    List<Job> getAllJob();
+    List<Job> getAllJob(String sort);
 }
